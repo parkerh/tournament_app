@@ -1,11 +1,14 @@
 require 'spec_helper'
 
 describe "Events" do
-  describe "GET /events" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get events_path
-      response.status.should be(200)
-    end
+  it "Should register an event" do
+    visit events_path
+    click_link "New Event"
+    fill_in "Title", with: "Woodstock"
+    click_button "Create Event"
+
+    error_message = "Location can't be blank"
+    page.should have_content(error_message)
   end
 end
+
