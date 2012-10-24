@@ -18,7 +18,7 @@
   <tr>
     <td><%= event.title %></td>
     <td><%= event.time %></td>
-    <td><%= event.organizer %></td>
+    <td><%= event.organizer.name %></td>
     <td><%= event.location %></td>
     <td><%= event.rules %></td>
     <td><%= event.game %></td>
@@ -33,3 +33,11 @@
 <br />
 
 <%= link_to 'New Event', new_event_path %>
+
+<br />
+
+<%= link_to 'New Participant', new_participant_path %>
+
+<br />
+
+<%= link_to 'New Organizer', new_organizer_path %>

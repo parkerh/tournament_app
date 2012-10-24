@@ -7,6 +7,10 @@ TournamentApp::Application.routes.draw do
 
   root :to => 'events#index'
 
+  match '/new_organizer_path', to: 'organizer#new'
+
+  match '/new_participant_path', to: 'participant#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
